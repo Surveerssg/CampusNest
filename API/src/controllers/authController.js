@@ -2,8 +2,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { jwtSecret, bcryptSalt } = require('../config/config');
-const crypto = require('crypto');
-const { sendMail } = require('../utils/mailer');
 
 const register = async (req, res) => {
   try {
@@ -125,42 +123,9 @@ const logout = (req, res) => {
   res.cookie('token', '').json(true);
 };
 
-const forgotPassword = async (req, res) => {
-  const { email } = req.body;
-  try {
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(404).json({ error: 'No user with that email.' });
-    }
-
-    // Generate a reset token
-    const resetToken = crypto.randomBytes(32).toString('hex');
-    user.resetPasswordToken = resetToken;
-    user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
-    await user.save();
-
-    // Create reset link
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
-
-    // Send email
-    await sendMail({
-      to: user.email,
-      subject: 'CampusNest Password Reset',
-      text: `Reset your password: ${resetUrl}`,
-      html: `<p>Click <a href="${resetUrl}">here</a> to reset your password. This link is valid for 1 hour.</p>`,
-    });
-
-    res.json({ message: 'Password reset link sent to your email.' });
-  } catch (err) {
-    console.error('Forgot password error:', err);
-    res.status(500).json({ error: 'Server error. Please try again.' });
-  }
-};
-
 module.exports = {
   register,
   login,
   getProfile,
-  logout,
-  forgotPassword
+  logout
 }; 

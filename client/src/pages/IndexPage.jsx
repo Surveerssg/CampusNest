@@ -157,13 +157,14 @@ export default function IndexPage() {
         {displayedProperties.length > 0 ? (
           displayedProperties.map((property) => {
             const uniqueKey = property.id || property._id || property.title;
+            const imageArr = property.images || property.photos;
             return (
               <Link to={`/property/${uniqueKey}`} key={uniqueKey}>
                 <div className="bg-glass-medium rounded-2xl overflow-hidden shadow border border-holo-border">
-                  {property.images?.[0] && (
+                  {imageArr?.[0] && (
                     <img
                       className="w-full aspect-square object-cover"
-                      src={property.images[0]}
+                      src={imageArr[0].startsWith('http') ? imageArr[0] : `http://localhost:4000/uploads/${imageArr[0]}`}
                       alt={property.title}
                     />
                   )}

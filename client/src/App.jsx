@@ -1,50 +1,92 @@
-import { Route, Routes } from 'react-router-dom';
-import Layout from './Layout.jsx';
-import IndexPage from './pages/IndexPage.jsx';
-import LoginPage from './pages/LoginPage.jsx';
-import RegisterPage from './pages/RegisterPage.jsx';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
-import { AuthProvider } from './context/AuthContext.jsx';
-import ProfilePage from './pages/ProfilePage.jsx';
-import PlacesPage from './pages/owner/PlacesPage.jsx';
-import PlacesFormPage from './pages/owner/PlacesFormPage.jsx';
-import PropertyPage from './pages/PropertyPage.jsx';
-import BookingsPage from './pages/BookingsPage.jsx';
-import BookingPage from './pages/BookingPage.jsx';
-import AdminLoginPage from './pages/AdminLoginPage.jsx';
-import AdminDashboardPage from './pages/AdminDashboardPage.jsx';
-import PendingApprovals from './components/PendingApprovals.jsx';
-import PropertyFormPage from './pages/PropertyFormPage.jsx';
-// import AnalyticsDashboard from './pages/admin/AnalyticsDashboard.jsx';
+import { AuthProvider } from './context/AuthContext';
+import Layout from './Layout';
+import IndexPage from './pages/IndexPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import ProfilePage from './pages/ProfilePage';
+import PropertiesPage from './pages/PropertiesPage';
+import PropertyPage from './pages/PropertyPage';
+import PropertyFormPage from './pages/PropertyFormPage';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import AdminDashboardPage from './pages/AdminDashboardPage';
+import AdminAnalyticsPage from './pages/AdminAnalyticsPage';
+import BookingsPage from './pages/BookingsPage';
+import BookingPage from './pages/BookingPage';
+import OwnerDashboardPage from './pages/OwnerDashboardPage';
+import AdminLoginPage from './pages/AdminLoginPage';
 
-axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000';
+import './index.css';
+
+axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.withCredentials = true;
 
-function App() {
+export default function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<IndexPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/account" element={<ProfilePage />} />
-          <Route path="/account/places" element={<PlacesPage />} />
-          <Route path="/account/places/new" element={<PlacesFormPage />} />
-          <Route path="/account/places/:id" element={<PlacesFormPage />} />
-          <Route path="/account/properties/new" element={<PropertyFormPage />} />
-          <Route path="/property/:id" element={<PropertyPage />} />
-          <Route path="/bookings" element={<BookingsPage />} />
-          <Route path="/booking/:id" element={<BookingPage />} />
-          <Route path="/admin/login" element={<AdminLoginPage />} />
-          <Route path="/admin" element={<AdminDashboardPage />}>
-            <Route path="approvals" element={<PendingApprovals />} />
-            {/* <Route path="analytics" element={<AnalyticsDashboard />} /> */}
-          </Route>
+        {/* Public routes */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/admin/login" element={<AdminLoginPage />} />
+
+        {/* Protected routes inside layout */}
+        <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+          <Route index element={<Navigate to="/properties" replace />} />
+          <Route path="properties" element={<IndexPage />} />
+          <Route path="account/:subpage?" element={<ProfilePage />} />
+
+          {/* Landlord-only routes */}
+          <Route
+            path="account/properties"
+            element={
+              <ProtectedRoute role="landlord">
+                <OwnerDashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="account/properties/new"
+            element={
+              <ProtectedRoute role="landlord">
+                <PropertyFormPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="account/properties/:id"
+            element={
+              <ProtectedRoute role="landlord">
+                <PropertyFormPage />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Shared routes */}
+          <Route path="property/:id" element={<PropertyPage />} />
+          <Route path="account/bookings" element={<BookingsPage />} />
+          <Route path="account/bookings/:id" element={<BookingPage />} />
+
+          {/* Admin-only routes */}
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute role="admin">
+                <AdminDashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/analytics"
+            element={
+              <ProtectedRoute role="admin">
+                <AdminAnalyticsPage />
+              </ProtectedRoute>
+            }
+          />
         </Route>
       </Routes>
     </AuthProvider>
   );
 }
-
-export default App;

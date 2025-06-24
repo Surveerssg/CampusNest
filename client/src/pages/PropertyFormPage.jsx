@@ -95,7 +95,7 @@ export default function PropertyFormPage() {
       if (id) {
         await axios.put('/api/places', { id, ...placeData });
       } else {
-        await axios.post('/api/places', placeData);
+        await axios.post('/api/places', { ...placeData, addedPhotos: addedPhotos });
       }
       navigate('/account/properties');
     } catch (error) {
@@ -157,7 +157,7 @@ export default function PropertyFormPage() {
           </div>
           <div>
             <h3 className="mt-2 -mb-1 text-white">Price per {leaseTerm.slice(0, -2)}</h3>
-            <input type="number" value={price} onChange={ev => setPrice(Number(ev.target.value))} placeholder="10000" className="w-full px-4 py-2 border border-gray-600 bg-gray-800 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <input type="number" value={price} onChange={ev => setPrice(Number(ev.target.value))} placeholder="0" className="w-full px-4 py-2 border border-gray-600 bg-gray-800 text-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
         </div>
         <button className="w-full py-3 mt-6 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-300">Save</button>

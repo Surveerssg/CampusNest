@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from './context/AuthContext';
 
 export default function Header() {
   const { user, isAdmin, isLandlord, logout } = useAuth();
   const firstName = user?.name?.split(' ')[0] || '';
+  const navigate = useNavigate();
 
   if (!user) {
     return (
@@ -64,6 +65,15 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2 flex-shrink-0">
+          {isAdmin() && (
+            <Link
+              to="/admin"
+              className="px-4 py-2 rounded-full bg-primary-blue text-white font-semibold shadow-md hover:bg-blue-600 transition-colors text-sm"
+            >
+              Admin Dashboard
+            </Link>
+          )}
+          
           {isLandlord() && (
             <Link
               to="/account/properties/new"
@@ -92,7 +102,7 @@ export default function Header() {
           </div>
 
           <button
-            onClick={logout}
+            onClick={() => logout(navigate)}
             className="px-3 py-2 rounded-full border border-primary-green bg-gradient-success text-white font-semibold shadow-md hover:from-primary-teal hover:to-primary-green transition-colors duration-200 whitespace-nowrap text-sm"
           >
             Logout

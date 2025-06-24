@@ -10,6 +10,27 @@ const accountTypes = [
   { value: 'landlord', label: 'Landlord' }
 ];
 
+function getPasswordStrength(password) {
+  let score = 0;
+  if (password.length >= 8) score++;
+  if (/[A-Z]/.test(password)) score++;
+  if (/[0-9]/.test(password)) score++;
+  if (/[^A-Za-z0-9]/.test(password)) score++;
+  if (score <= 1) return { label: 'Weak', color: 'bg-red-500', value: 25 };
+  if (score === 2) return { label: 'Medium', color: 'bg-yellow-400', value: 50 };
+  if (score === 3) return { label: 'Good', color: 'bg-blue-400', value: 75 };
+  return { label: 'Strong', color: 'bg-green-500', value: 100 };
+}
+
+function getPasswordRequirements(password) {
+  return {
+    length: password.length >= 8,
+    uppercase: /[A-Z]/.test(password),
+    number: /[0-9]/.test(password),
+    special: /[^A-Za-z0-9]/.test(password),
+  };
+}
+
 export default function RegisterPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -22,6 +43,10 @@ export default function RegisterPage() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const passwordReqs = getPasswordRequirements(password);
+  const allReqsMet = Object.values(passwordReqs).every(Boolean);
+  const strength = getPasswordStrength(password);
 
   if (user) {
     return <Navigate to={'/'} />
@@ -174,11 +199,70 @@ export default function RegisterPage() {
                     placeholder="••••••••••••••••"
                     value={password}
                     onChange={ev => setPassword(ev.target.value)}
-                    className="w-full px-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:bg-slate-700/70 transition-all duration-300 disabled:opacity-50 disabled:bg-slate-700/30"
+                    className={`w-full px-4 py-4 bg-slate-700/50 border ${!allReqsMet && password ? 'border-red-400' : 'border-slate-600/50'} rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:bg-slate-700/70 transition-all duration-300 disabled:opacity-50 disabled:bg-slate-700/30`}
                     disabled={loading}
                     required
                   />
                 </div>
+                {/* Password strength meter */}
+                {password && (
+                  <div className="mt-2">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-slate-300">Password strength:</span>
+                      <span className={`font-semibold ${strength.label === 'Weak' ? 'text-red-400' : strength.label === 'Medium' ? 'text-yellow-400' : strength.label === 'Good' ? 'text-blue-400' : 'text-green-400'}`}>{strength.label}</span>
+                    </div>
+                    <div className="w-full h-2 bg-slate-700 rounded mt-1">
+                      <div className={`${strength.color} h-2 rounded`} style={{ width: `${strength.value}%` }}></div>
+                    </div>
+                  </div>
+                )}
+                {/* Password requirements checklist */}
+                <div className="mt-4 bg-slate-700/60 rounded-xl p-4">
+                  <div className="font-semibold text-slate-200 mb-2">Password Requirements:</div>
+                  <ul className="space-y-1 text-sm">
+                    <li className={passwordReqs.length ? 'text-green-400' : 'text-slate-300'}>
+                      <span className="mr-2">{passwordReqs.length ? '✔' : '○'}</span>At least 8 characters
+                    </li>
+                    <li className={passwordReqs.uppercase ? 'text-green-400' : 'text-slate-300'}>
+                      <span className="mr-2">{passwordReqs.uppercase ? '✔' : '○'}</span>One uppercase letter
+                    </li>
+                    <li className={passwordReqs.number ? 'text-green-400' : 'text-slate-300'}>
+                      <span className="mr-2">{passwordReqs.number ? '✔' : '○'}</span>One number
+                    </li>
+                    <li className={passwordReqs.special ? 'text-green-400' : 'text-slate-300'}>
+                      <span className="mr-2">{passwordReqs.special ? '✔' : '○'}</span>One special character
+                    </li>
+                  </ul>
+                  {!passwordReqs.length && password && (
+                    <div className="text-red-400 text-xs mt-2 flex items-center gap-1">
+                      <span>⚠</span> Min 8 characters
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Confirm Password Field */}
+              <div>
+                <label className="block text-slate-300 mb-3 font-medium" htmlFor="confirmPassword">
+                  Confirm Password
+                </label>
+                <div className="relative">
+                  <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Confirm your password"
+                    value={confirmPassword}
+                    onChange={ev => setConfirmPassword(ev.target.value)}
+                    className="w-full px-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-slate-500 focus:bg-slate-700/70 transition-all duration-300 disabled:opacity-50 disabled:bg-slate-700/30"
+                    disabled={!allReqsMet || loading}
+                    required
+                  />
+                </div>
+                {confirmPassword && confirmPassword !== password && (
+                  <div className="text-red-400 text-xs mt-2 flex items-center gap-1">
+                    <span>⚠</span> Passwords do not match
+                  </div>
+                )}
               </div>
 
               {/* Account Type Field */}

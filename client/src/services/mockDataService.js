@@ -155,34 +155,6 @@ export const getLandlordProperties = (landlordId) => {
   return mockProperties.filter(property => property.ownerId === landlordId);
 };
 
-// Payment functions
-export const processPayment = async (bookingId, paymentDetails) => {
-  // Simulate a delay for payment processing
-  await new Promise(resolve => setTimeout(resolve, 2000));
-
-  const booking = mockBookings.find(b => b.id === bookingId);
-  if (!booking) {
-    throw new Error('Booking not found');
-  }
-
-  // Simulate successful payment
-  // In a real application, you would interact with Stripe's API here
-  console.log('Simulating payment for booking:', bookingId, 'with details:', paymentDetails);
-  booking.status = 'paid'; // Update booking status to paid upon successful payment
-  return { success: true, message: 'Payment processed successfully!' };
-};
-
-export const createPaymentIntent = async (amount) => {
-  // Simulate creating a payment intent from a backend
-  // In a real app, this would be an API call to your server which then calls Stripe
-  await new Promise(resolve => setTimeout(resolve, 500));
-  return {
-    clientSecret: 'pi_mock_client_secret_12345', // Mock client secret
-    amount: amount,
-    currency: 'inr',
-  };
-};
-
 // Admin functions
 export const getAllUsers = () => mockUsers;
 export const getAllBookings = () => mockBookings;

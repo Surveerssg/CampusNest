@@ -150,16 +150,6 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              {/* Remember Me & Forgot Password */}
-              <div className="flex items-center justify-between">
-                <Link 
-                  className="text-slate-300 hover:text-slate-100 transition-colors duration-200 font-medium" 
-                  to="/forgot-password"
-                >
-                  Forgot password?
-                </Link>
-              </div>
-
               {/* Login Button */}
               <button 
                 className="w-full py-4 bg-gradient-to-r from-slate-700 to-slate-600 rounded-xl text-slate-100 font-bold text-lg shadow-lg hover:shadow-xl hover:from-slate-600 hover:to-slate-500 hover:scale-[1.02] transform transition-all duration-300 relative overflow-hidden border border-slate-600/50"

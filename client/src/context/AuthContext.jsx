@@ -59,11 +59,12 @@ export const AuthProvider = ({ children }) => {
     
 
   // Logout
-  const logout = () => {
+  const logout = (navigate) => {
     setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     delete axios.defaults.headers.common['Authorization'];
+    if (navigate) navigate('/login');
   };
 
   const isAdmin = () => user?.role === 'admin';

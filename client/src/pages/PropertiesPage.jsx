@@ -15,12 +15,14 @@ export default function PropertiesPage() {
 
   useEffect(() => {
     Promise.all([
-      import('../services/mockDataService').then((m) => m.getMockProperties()),
+      import('../services/mockDataService').then((m) => m.getAllProperties()),
       axios.get('/api/places'),
     ]).then(([mock, { data: real }]) => {
       const all = [...mock, ...real.filter(p => p.isApproved)];
-      setProperties(all);
-      setFilteredProperties(all);
+      // Deduplicate by case-insensitive, trimmed title
+      const unique = Array.from(new Map(all.map(item => [item.title.trim().toLowerCase(), item])).values());
+      setProperties(unique);
+      setFilteredProperties(unique);
     });
   }, []);
 
@@ -73,6 +75,7 @@ export default function PropertiesPage() {
       </div>
 
       {/* Grid of properties */}
+      {console.log('Rendering properties:', filteredProperties)}
       <div className="grid gap-x-10 gap-y-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProperties.map((property) => (
           <Link to={'/property/' + property._id} key={property._id} className="block group">

@@ -17,8 +17,8 @@ router.get('/user-places', getUserPlaces);
 router.get('/:id', getPlaceById);
 router.put('/', updatePlace);
 router.get('/', getAllPlaces);
-router.get('/admin/pending', requireAdmin, getPendingPlaces);
-router.patch('/admin/:id/approve', requireAdmin, approvePlace);
-router.patch('/admin/:id/reject',  requireAdmin, rejectPlace);
+router.get('/admin/pending', getPendingPlaces);
+router.patch('/admin/:id/approve', approvePlace);
+router.patch('/admin/:id/reject',  rejectPlace);
 
 module.exports = router; 
