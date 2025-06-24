@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #FF385C;
+  --secondary-color: #00A699;
+}
+
+body {
+  font-family: 'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #222222;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  @apply w-full border my-1 py-2 px-3 rounded-2xl;
+}
+
+input[type="checkbox"] {
+  accent-color: #00f5ff; /* neon cyan */
+}
+
+textarea {
+  height: 140px;
+}
+
+button {
+  @apply bg-gray-300;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  @apply bg-primary p-2 w-full text-white rounded-2xl;
+}
+
+.input-style, select.input-style {
+  @apply w-full border my-2 py-2 px-3 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  background-color: #181c2b;
+  color: #e0e6f7;
+  border-color: #3a3f5c;
+}
+
+.select-dark {
+  background-color: #181c2b;
+  color: #e0e6f7;
+  border: 1px solid #3a3f5c;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem 0.75rem 1rem;
+  min-width: 160px;
+  appearance: none;
+}
+
+.select-dark option {
+  background: #181c2b;
+  color: #e0e6f7;
+}
+
+/* Navigation styles */
+nav {
+  @apply flex justify-between items-center py-4;
+}
+
+/* Card hover effects */
+.place-card {
+  @apply transition-all duration-300 ease-in-out hover:shadow-lg;
+}
+
+/* Loading animation */
+.loading-spinner {
+  @apply animate-spin rounded-full border-t-2 border-b-2 border-primary h-12 w-12;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --- Begin merged styles from App.css --- */
+@layer base {
+  :root {
+    /* Core Neon Colors */
+    --neon-cyan: #00f5ff;
+    --neon-pink: #ff1493;
+    --neon-green: #39ff14;
+    --neon-purple: #bf00ff;
+    --electric-blue: #0080ff;
+    /* Deep Space Backgrounds */
+    --space-black: #0a0a0f;
+    --cosmic-navy: #1a1a2e;
+    --void-purple: #16213e;
+    --nebula-dark: #0f3460;
+    /* Holographic Accent Shades */
+    --holo-silver: #c0c0d0;
+    --plasma-pink: #ff6b9d;
+    --cyber-teal: #4ecdc4;
+    --aurora-green: #45ffca;
+    --solar-orange: #ffa726;
+    /* Main Background for the app */
+    --bg-primary: linear-gradient(135deg, var(--space-black) 0%, var(--cosmic-navy) 50%, var(--void-purple) 100%);
+    --bg-secondary: var(--nebula-dark);
+    --bg-surface: rgba(26, 26, 46, 0.8);
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: var(--holo-silver);
+    --text-accent-cyan: var(--neon-cyan);
+    --text-accent-pink: var(--plasma-pink);
+    --text-success: var(--aurora-green);
+    --text-warning: var(--solar-orange);
+    /* Glass Effects */
+    --glass-light: rgba(255, 255, 255, 0.05);
+    --glass-medium: rgba(255, 255, 255, 0.1);
+    --backdrop-blur-strong: blur(20px);
+    /* Animations */
+    --transition-neon: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --glow-animation: glow 2s ease-in-out infinite alternate;
+    /* Border Effects */
+    --neon-border-cyan: rgba(0, 245, 255, 0.6);
+    --neon-border-pink: rgba(255, 20, 147, 0.6);
+    --holo-border: rgba(192, 192, 208, 0.3);
+    /* RGB values for Tailwind gradients */
+    --electric-blue-rgb: 0, 128, 255;
+    --neon-cyan-rgb: 0, 245, 255;
+    --neon-pink-rgb: 255, 20, 147;
+    --solar-orange-rgb: 255, 167, 38;
+    --neon-green-rgb: 57, 255, 20;
+    --aurora-green-rgb: 69, 255, 202;
+    --neon-purple-rgb: 191, 0, 255;
+    --plasma-pink-rgb: 255, 107, 157;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Circular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.4), 0 0 40px rgba(255, 20, 147, 0.2);
+  }
+}
+/* --- End merged styles from App.css --- */ 

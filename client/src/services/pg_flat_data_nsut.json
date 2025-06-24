@@ -1,0 +1,678 @@
+[
+  {
+    "id": "1f40b2a3-5491-45fd-a447-d2adfbb28d74",
+    "title": "Elite Stay for Girls",
+    "type": "flat",
+    "price": 15000,
+    "rating": 4.5,
+    "location": "Dwarka Sector 3",
+    "amenities": [
+      "Geyser",
+      "Refrigerator",
+      "Food",
+      "WiFi"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400&h=300&fit=crop"
+    ],
+    "description": "Elite Stay for Girls is a spacious flat with modern amenities, perfect for comfortable living near campus.",
+    "occupancy": "single",
+    "roomType": "1BHK",
+    "leaseTerm": "monthly",
+    "ownerId": "b9c19935",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      }
+    ]
+  },
+  {
+    "id": "2bc11e53-5134-4ad1-b472-aba747f55d72",
+    "title": "Metro PG Dwarka",
+    "type": "pg",
+    "price": 8000,
+    "rating": 4.4,
+    "location": "Near Dabri Mor",
+    "amenities": [
+      "24x7 Water",
+      "Laundry",
+      "Refrigerator",
+      "Power Backup",
+      "Geyser",
+      "CCTV"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
+    ],
+    "description": "Metro PG Dwarka offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "co-ed",
+    "roomType": "single",
+    "leaseTerm": "yearly",
+    "ownerId": "1ba74ddd",
+    "reviews": [
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      }
+    ]
+  },
+  {
+    "id": "a2804bba-2b24-452e-a161-14bac7dd7077",
+    "title": "UrbanNest Co-Living",
+    "type": "pg",
+    "price": 5500,
+    "rating": 4.5,
+    "location": "Near NSUT Gate 3",
+    "amenities": [
+      "Geyser",
+      "Laundry",
+      "Food",
+      "Refrigerator",
+      "24x7 Water"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?w=400&h=300&fit=crop"
+    ],
+    "description": "UrbanNest Co-Living offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "co-ed",
+    "roomType": "double",
+    "leaseTerm": "monthly",
+    "ownerId": "0de5a7bd",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      }
+    ]
+  },
+  {
+    "id": "b6f128e9-6c89-4934-83b6-26a04d1153f7",
+    "title": "GreenView PG",
+    "type": "pg",
+    "price": 7500,
+    "rating": 4.5,
+    "location": "Dwarka Sector 3",
+    "amenities": [
+      "Geyser",
+      "24x7 Water",
+      "AC",
+      "Power Backup",
+      "Food",
+      "WiFi",
+      "Housekeeping"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1725779333925-1df900a8e1bb?q=80&w=1190&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1670950413515-8e4d0c2f78a3?q=80&w=973&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop"
+    ],
+    "description": "GreenView PG offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "co-ed",
+    "roomType": "triple",
+    "leaseTerm": "yearly",
+    "ownerId": "96597b0f",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      },
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      }
+    ]
+  },
+  {
+    "id": "e5ceec93-2bbd-455d-bcb4-105d8e882303",
+    "title": "BrightStay Dwarka",
+    "type": "flat",
+    "price": 20000,
+    "rating": 3.8,
+    "location": "Nasirpur",
+    "amenities": [
+      "Housekeeping",
+      "24x7 Water",
+      "Geyser",
+      "WiFi",
+      "CCTV"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+    ],
+    "description": "BrightStay Dwarka is a spacious flat with modern amenities, perfect for comfortable living near campus.",
+    "occupancy": "single",
+    "roomType": "1BHK",
+    "leaseTerm": "monthly",
+    "ownerId": "269c9389",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      }
+    ]
+  },
+  {
+    "id": "95abebe8-a1d2-44e4-81e2-c7fcf5cb14b1",
+    "title": "Harmony PG Rooms",
+    "type": "pg",
+    "price": 8000,
+    "rating": 4.8,
+    "location": "Rajapuri",
+    "amenities": [
+      "Housekeeping",
+      "Geyser",
+      "CCTV",
+      "WiFi",
+      "Power Backup",
+      "AC"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1678895223308-da40c609e39b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1725989336565-6ce04dcce201?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1740989488591-55648f155236?q=80&w=1186&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "description": "Harmony PG Rooms offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "boys",
+    "roomType": "triple",
+    "leaseTerm": "monthly",
+    "ownerId": "6928c753",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      },
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      }
+    ]
+  },
+  {
+    "id": "ad15d4b2-e4ca-469f-bda0-4a9eb86e0012",
+    "title": "Budget Stay PG",
+    "type": "pg",
+    "price": 6000,
+    "rating": 4.2,
+    "location": "Near Dabri Mor",
+    "amenities": [
+      "Housekeeping",
+      "AC",
+      "CCTV",
+      "Food",
+      "Laundry",
+      "Power Backup",
+      "Refrigerator"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1740989488591-55648f155236?q=80&w=1186&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1678895223308-da40c609e39b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400&h=300&fit=crop"
+    ],
+    "description": "Budget Stay PG offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "girls",
+    "roomType": "single",
+    "leaseTerm": "monthly",
+    "ownerId": "43573e8a",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Loved the food and service!",
+        "user": "Riya"
+      }
+    ]
+  },
+  {
+    "id": "10016e3a-807a-406f-9d30-2d70488aba56",
+    "title": "Comfort Living",
+    "type": "pg",
+    "price": 8000,
+    "rating": 3.9,
+    "location": "Dwarka Mor",
+    "amenities": [
+      "Refrigerator",
+      "CCTV",
+      "Housekeeping",
+      "WiFi"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1678895223308-da40c609e39b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop"
+    ],
+    "description": "Comfort Living offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "boys",
+    "roomType": "double",
+    "leaseTerm": "monthly",
+    "ownerId": "2ba92a9f",
+    "reviews": [
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      }
+    ]
+  },
+  {
+    "id": "6c4cb10e-65f4-4c57-86e8-ae0bb4ef30d7",
+    "title": "SmartLiving Rooms",
+    "type": "flat",
+    "price": 20000,
+    "rating": 4.7,
+    "location": "Near Dabri Mor",
+    "amenities": [
+      "WiFi",
+      "Power Backup",
+      "Food",
+      "Housekeeping",
+      "Geyser"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+    ],
+    "description": "SmartLiving Rooms is a spacious flat with modern amenities, perfect for comfortable living near campus.",
+    "occupancy": "group",
+    "roomType": "1BHK",
+    "leaseTerm": "yearly",
+    "ownerId": "eaf2d942",
+    "reviews": [
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      },
+      {
+        "rating": 5,
+        "comment": "Loved the food and service!",
+        "user": "Riya"
+      }
+    ]
+  },
+  {
+    "id": "f1d2a93e-5eee-49fe-b9f9-4721fd5c6955",
+    "title": "StudentStay Elite",
+    "type": "pg",
+    "price": 8000,
+    "rating": 4.5,
+    "location": "Dwarka Sector 14",
+    "amenities": [
+      "AC",
+      "CCTV",
+      "Food",
+      "24x7 Water",
+      "WiFi"
+    ],
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1683649964203-baf13fa852e4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
+    ],
+    "description": "StudentStay Elite offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "co-ed",
+    "roomType": "double",
+    "leaseTerm": "yearly",
+    "ownerId": "92552a0b",
+    "reviews": [
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      },
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      }
+    ]
+  },
+  {
+    "id": "96098192-d34b-49a2-bf56-955713e5d548",
+    "title": "Shanti PG for Girls",
+    "type": "pg",
+    "price": 7500,
+    "rating": 4.3,
+    "location": "Dwarka Mor",
+    "amenities": [
+      "24x7 Water",
+      "WiFi",
+      "AC",
+      "Food",
+      "Housekeeping",
+      "CCTV"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?w=400&h=300&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1683649964203-baf13fa852e4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop"
+    ],
+    "description": "Shanti PG for Girls offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "girls",
+    "roomType": "double",
+    "leaseTerm": "yearly",
+    "ownerId": "c78d9f38",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Loved the food and service!",
+        "user": "Riya"
+      },
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      }
+    ]
+  },
+  {
+    "id": "fc20093b-6ae6-48ee-bd8a-cf4cbcd43c89",
+    "title": "Econo PG Dwarka",
+    "type": "pg",
+    "price": 6500,
+    "rating": 3.9,
+    "location": "Rajapuri",
+    "amenities": [
+      "Geyser",
+      "Power Backup",
+      "Food",
+      "24x7 Water",
+      "WiFi"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400&h=300&fit=crop"
+    ],
+    "description": "Econo PG Dwarka offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "boys",
+    "roomType": "triple",
+    "leaseTerm": "yearly",
+    "ownerId": "e043606b",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      },
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      }
+    ]
+  },
+  {
+    "id": "0c5cead5-dce5-4f35-a489-6f674947f299",
+    "title": "CityZen Co-Living",
+    "type": "flat",
+    "price": 12000,
+    "rating": 3.6,
+    "location": "Near Palam",
+    "amenities": [
+      "Geyser",
+      "Housekeeping",
+      "24x7 Water",
+      "Refrigerator",
+      "CCTV"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1661258412259-fe5a585c1450?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+    ],
+    "description": "CityZen Co-Living is a spacious flat with modern amenities, perfect for comfortable living near campus.",
+    "occupancy": "group",
+    "roomType": "2BHK",
+    "leaseTerm": "monthly",
+    "ownerId": "08794ecd",
+    "reviews": [
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      },
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      }
+    ]
+  },
+  {
+    "id": "63310ddf-0ac6-4f12-9a2a-9eb79bce85bd",
+    "title": "The PG Point",
+    "type": "pg",
+    "price": 7500,
+    "rating": 3.8,
+    "location": "Dwarka Sector 14",
+    "amenities": [
+      "AC",
+      "CCTV",
+      "WiFi",
+      "Geyser",
+      "Laundry",
+      "Power Backup",
+      "Housekeeping"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1706200234292-66928ea63168?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1726390415269-2f7678d6b609?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
+    ],
+    "description": "The PG Point offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "boys",
+    "roomType": "single",
+    "leaseTerm": "yearly",
+    "ownerId": "587a9530",
+    "reviews": [
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      },
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      }
+    ]
+  },
+  {
+    "id": "f7c0034f-6fc8-49e3-adf5-a4b85c6e3808",
+    "title": "Cosy Cribs Dwarka",
+    "type": "pg",
+    "price": 6500,
+    "rating": 4.2,
+    "location": "Near NSUT Gate 3",
+    "amenities": [
+      "Geyser",
+      "24x7 Water",
+      "AC",
+      "Laundry",
+      "Power Backup",
+      "Housekeeping",
+      "Food"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?w=400&h=300&fit=crop"
+    ],
+    "description": "Cosy Cribs Dwarka offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "boys",
+    "roomType": "single",
+    "leaseTerm": "monthly",
+    "ownerId": "d7867e43",
+    "reviews": [
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      },
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      }
+    ]
+  },
+  {
+    "id": "0a764ac2-86fa-4ce9-abd0-bfb4c74a41e8",
+    "title": "Maple Nest PG",
+    "type": "pg",
+    "price": 7000,
+    "rating": 4.5,
+    "location": "Rajapuri",
+    "amenities": [
+      "Geyser",
+      "AC",
+      "WiFi",
+      "CCTV",
+      "Housekeeping",
+      "Power Backup",
+      "Refrigerator"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1737570736853-c3a3e74009da?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop"
+    ],
+    "description": "Maple Nest PG offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "boys",
+    "roomType": "triple",
+    "leaseTerm": "yearly",
+    "ownerId": "4ebbce75",
+    "reviews": [
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      }
+    ]
+  },
+  {
+    "id": "429204dc-255d-4b47-a2f0-7d8e638c04ad",
+    "title": "DreamStay Hostel",
+    "type": "flat",
+    "price": 18000,
+    "rating": 4.9,
+    "location": "Dwarka Sector 3",
+    "amenities": [
+      "WiFi",
+      "24x7 Water",
+      "AC",
+      "Geyser",
+      "Food"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1610123172763-1f587473048f?q=80&w=701&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+    ],
+    "description": "DreamStay Hostel is a spacious flat with modern amenities, perfect for comfortable living near campus.",
+    "occupancy": "group",
+    "roomType": "1BHK",
+    "leaseTerm": "monthly",
+    "ownerId": "00e1e534",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "Clean and peaceful",
+        "user": "Amit"
+      },
+      {
+        "rating": 4.5,
+        "comment": "Very near to NSUT and safe.",
+        "user": "Kavita"
+      }
+    ]
+  },
+  {
+    "id": "97ade01f-9f41-4d20-9bbe-385f29685166",
+    "title": "Evergreen PG",
+    "type": "pg",
+    "price": 6500,
+    "rating": 3.7,
+    "location": "Near Palam",
+    "amenities": [
+      "24x7 Water",
+      "Laundry",
+      "Food",
+      "Power Backup",
+      "WiFi",
+      "Geyser",
+      "CCTV"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1698870157085-11632d2ddef8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1740989488591-55648f155236?q=80&w=1186&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
+    ],
+    "description": "Evergreen PG offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "co-ed",
+    "roomType": "single",
+    "leaseTerm": "monthly",
+    "ownerId": "64e721f7",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Loved the food and service!",
+        "user": "Riya"
+      }
+    ]
+  },
+  {
+    "id": "5bd0cfec-cffc-4940-8c15-0484596a3332",
+    "title": "Vista PG Rooms",
+    "type": "pg",
+    "price": 8500,
+    "rating": 3.8,
+    "location": "Dwarka Sector 12",
+    "amenities": [
+      "Housekeeping",
+      "Power Backup",
+      "Laundry",
+      "AC",
+      "WiFi"
+    ],
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1663089331117-b4176fef4c9a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop"
+    ],
+    "description": "Vista PG Rooms offers a comfortable stay with essential amenities and proximity to NSUT.",
+    "occupancy": "co-ed",
+    "roomType": "double",
+    "leaseTerm": "yearly",
+    "ownerId": "07476e72",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Loved the food and service!",
+        "user": "Riya"
+      },
+      {
+        "rating": 3,
+        "comment": "Decent for the price",
+        "user": "Mohit"
+      }
+    ]
+  }
+]
