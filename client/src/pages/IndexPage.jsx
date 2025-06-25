@@ -164,7 +164,7 @@ export default function IndexPage() {
                   {imageArr?.[0] && (
                     <img
                       className="w-full aspect-square object-cover"
-                      src={imageArr[0].startsWith('http') ? imageArr[0] : `http://localhost:4000/uploads/${imageArr[0]}`}
+                      src={imageArr[0].startsWith('http') ? imageArr[0] : `${import.meta.env.VITE_API_BASE_URL || 'https://campusnest-gnjl.onrender.com'}/uploads/${imageArr[0]}`}
                       alt={property.title}
                     />
                   )}

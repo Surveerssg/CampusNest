@@ -19,7 +19,7 @@ import AdminLoginPage from './pages/AdminLoginPage';
 
 import './index.css';
 
-axios.defaults.baseURL = 'http://localhost:4000';
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || 'https://campusnest-gnjl.onrender.com';
 axios.defaults.withCredentials = true;
 
 export default function App() {

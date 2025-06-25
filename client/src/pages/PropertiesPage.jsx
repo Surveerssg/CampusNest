@@ -83,7 +83,7 @@ export default function PropertiesPage() {
               {property.photos?.[0] && (
                 <img
                   className="rounded-t-2xl object-cover w-full aspect-[4/3]"
-                  src={'http://localhost:4000/uploads/' + property.photos[0]}
+                  src={`${import.meta.env.VITE_API_BASE_URL || 'https://campusnest-gnjl.onrender.com'}/uploads/${property.photos[0]}`}
                   alt={property.title}
                 />
               )}

@@ -26,7 +26,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': 'http://localhost:4000', // <-- use 4000 here
+      '/api': process.env.VITE_API_BASE_URL || 'https://campusnest-gnjl.onrender.com', // Use env or Render URL
     },
   },
 })
